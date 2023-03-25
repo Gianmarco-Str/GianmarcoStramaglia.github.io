@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gianmarco Stramaglia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="email">
+        <p>g.stramaglia@outlook.it</p>
+        <div class="vertical-line"></div>
+    </div>
+
+    <nav>
+        <a href="#intro-section">Work</a>
+        <a href="mailto:g.stramaglia@outlook.it">
+            <button class="contact-me-btn" >CONTACT ME</button>
+        </a>
+    </nav>
+
+    <div class="animated-bg-container">
+        <video class="animated-bg" autoplay muted loop>
+            <source src="./0001-0419.mp4" 
+            type="video/mp4">
+        </video>
+    </div>
+
+    <div class="hero-section-container">
+        <div class="hero-section">
+            <p>Hi, my name is</p>
+            <h1>Gianmarco Stramaglia.</h1> 
+            <h1>I'm a <span>front end developer</span></h1>
+            <h2>based in Bari, Italy.</h2>
+            <a href="mailto:g.stramaglia@outlook.it">
+                <button class="contact-me-btn">CONTACT ME</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="work">
+        <div class="intro-section" id="intro-section">
+            <h2>Things I've Built</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="work-container" id="work-container">
+            <p class="small-text">Featured Project</p>
+            <p onclick="openProjectLink(0)" class="project-name">Black Jack Game</p>
+            <div onclick="openProjectLink(0)" class="project-preview-link" ></div>
+            <div onclick="openProjectLink(0)" class="project-preview-small"><div class="project-preview project-preview-one"></div></div>
+            <div class="project-description-container">
+                <p class="project-description">Check out my version of the classic card game Blackjack,
+                    complete with a fish currency system! Play against the computer to win more fishes and achieve a new high score.
+                    Give it a try and see how well you do!
+                </p>
+            </div>
+            <div class="languages-used">
+                <p>React</p>
+                <p>JSX</p>
+                <p>CSS</p>
+            </div>
+            <img onclick="openProjectGit(0)" class="git-link" src="/images/git-logo.svg">
+        </div>
+
+        <div class="work-container">
+            <p class="small-text">Featured Project</p>
+            <p onclick="openProjectLink(1)" class="project-name">White Noise App</p>
+            <div onclick="openProjectLink(1)" class="project-preview-link project-preview-link-two" href="#"></div>
+            <div onclick="openProjectLink(1)" class="project-preview-small"><div class="project-preview project-preview-two"></div></div>
+            <div class="project-description-container">
+                <p class="project-description">
+                    This project was designed to help users create a calm and peaceful atmosphere by generating soothing sounds like rain, waves, and forest sounds.
+                    With a simple and user-friendly interface, you can easily adjust the volume and mix different sounds to create your perfect environment. 
+               </p>
+            </div>
+
+            <div class="languages-used">
+                <p>React</p>
+                <p>JSX</p>
+                <p>CSS</p>
+            </div>
+            <img onclick="openProjectGit(1)" class="git-link" src="/images/git-logo.svg">
+        </div>
+
+        <div class="work-container">
+            <p class="small-text">Featured Project</p>
+            <p onclick="openProjectLink(2)" class="project-name">Color Scheme Generator</p>
+            <div onclick="openProjectLink(2)" class="project-preview-link" ></div>
+            <div onclick="openProjectLink(2)" class="project-preview-small"><div class="project-preview project-preview-three"></div></div>
+            <div class="project-description-container">
+                <p class="project-description">
+                    Are you struggling to come up with the perfect color scheme for your projects? Let my app help! 
+                    Simply choose a base color and the type of color scheme you want, and my app will generate a beautiful color palette for you. 
+               </p>
+            </div>
+            <div class="languages-used">
+                <p>Javascript</p>
+                <p>CSS</p>
+                <p>HTML</p>
+            </div>
+            <img onclick="openProjectGit(2)" class="git-link" src="/images/git-logo.svg">
+        </div>
+
+    </div>
+
+    <div class="contact-form" id="contact-form">
+        <div class="intro-section">
+            <h2>Contact Me</h2>
+            <div class="divider"></div>
+        </div>
+        <form action="https://formspree.io/f/xyyajwbg" method="POST">
+            <div class="text-input-container">
+                <div class="text-input">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                
+                <div class="text-input">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+            </div>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message"></textarea><br/>
+          
+            <button class="send-btn">Send</button>
+          </form>
+    </div>
+    <script>
+        const projectsArr = ["Black-Jack","White-Noise-App","Color-Scheme-Generator"]
+
+        function openProjectLink(i) {
+            window.open(`https://gianmarco-str.github.io/${projectsArr[i]}/`)
+        }
+
+        function openProjectGit(i) {
+            window.open(`https://github.com/Gianmarco-Str/${projectsArr[i]}`)
+        }
+    </script>
+</body>
+</html>
