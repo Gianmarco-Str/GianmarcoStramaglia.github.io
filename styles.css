@@ -17,7 +17,11 @@ h1 {
   }
 
 h2 {
-    font-size: 1.4rem
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 1.2rem;
 }
 
 .project-name {
@@ -25,12 +29,17 @@ h2 {
     cursor: pointer;
 }
 
-p {
+p,
+li {
     font-size: .9rem;
 }
 
 .small-text {
     font-size: .8rem;
+}
+
+.light-cyan-text {
+    color: #d7f1ef;
 }
   
 @media (min-width: 500px) {
@@ -42,11 +51,16 @@ p {
         font-size: 1.6rem
     }
 
+    h3 {
+        font-size: 1.4rem;
+    }
+
     .project-name {
         font-size: 1.4rem;
     }
 
-    p {
+    p,
+    li {
         font-size: 1.2rem;
     }
 }
@@ -60,11 +74,16 @@ p {
         font-size: 2rem
     }
 
+    h3 {
+        font-size: 1.6rem;
+    }
+
     .project-name {
         font-size: 1.6rem;
     }
 
-    p {
+    p,
+    li {
         font-size: 1.3rem;
     }
 
@@ -107,7 +126,7 @@ label {
     display:flex;
     flex-direction:row;
     align-items: center;
-    margin-bottom: 2.5em;
+    margin-bottom: 3em;
 }
 
 .intro-section:last-of-type {
@@ -245,13 +264,67 @@ nav a:focus::after {
     font-size: 1.1rem;
 }
 
+
+/* About Section */
+
+.about-description p {
+    letter-spacing: 1.4px;
+}
+
+.personal-informations {
+    margin: 80px 0 120px 0;
+}
+
+.long-description {
+    display: none;
+}
+
+.info-container {
+    margin-bottom: 40px;
+}
+
+.info-divider {
+    width: 100%;
+    height: 2px;
+    background-color: #65FFE3;
+    opacity: 40%;
+}
+
+.details,
+li {
+    margin-bottom: 8px;
+}
+
+.language {
+    margin: 25px 0 8px 0;
+}
+
+.language-level-italian,
+.language-level-english {
+    border: 1.5px solid #65FFE3;
+    width: 140px;
+    height: 12px;
+}
+
+.language-level-italian {
+    background-color: #65FFE3;
+}
+
+.language-level-english div {
+    background-color: #65FFE3;
+    width: 84%;
+    height: 100%;
+}
+
+
 /* Work Section */
 
 .work-container {
     margin-bottom: 60px;
 }
 
-.work {
+.work,
+.about {
     width: 90%;
     margin: 0 auto;
     max-width: 550px;
@@ -309,7 +382,6 @@ nav a:focus::after {
 }
 
 .project-description {
-    color: #d7f1ef;
     font-size: .9rem;
 }
 
@@ -415,9 +487,36 @@ input:-webkit-autofill:active{
         margin-top: 130px;
     }
 
+    /* About Section */
+
+    .about-description {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .short-description {
+        display: none;
+    }
+
+    .info-divider {
+        margin-top: 30px;
+        height: 200px;
+        width: 2px;
+    }
+
+    .long-description {
+        display: inline;
+    }
+
+    .personal-informations {
+        display: flex;
+        justify-content: space-around;
+    }
+
     /* Work Section */
 
-    .work {
+    .work,
+    .about {
         width: 70%;
         max-width: 950px;
         margin-bottom: 200px;
@@ -532,20 +631,3 @@ input:-webkit-autofill:active{
 
 }
 
-/*.animated-bg-container {
-    position: absolute;
-    z-index: -5;
-    left: 50%;
-    border: 2px solid red;
-    transform: translateX(-50%);
-    width: 80%;
-    height: 100vh;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.animated-bg {
-    width: 50%;
-    height: auto;
-}*/
